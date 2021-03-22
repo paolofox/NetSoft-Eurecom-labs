@@ -45,7 +45,7 @@ class Firewall (EventMixin):
             log.info("Adding firewall rule drop: src %s - dst %s", src, dst)
             self.firewall[(src, dst)]=value
             self.sendRule(src, dst, 10000)
-	    	log.info("Adding firewall rule drop: src %s - dst %s", dst, src)
+	    log.info("Adding firewall rule drop: src %s - dst %s", dst, src)
             self.firewall[(dst, src)]=value
             self.sendRule(dst, src, 10000)
 
