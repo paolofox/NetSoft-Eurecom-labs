@@ -34,7 +34,7 @@ class Firewall (EventMixin):
         msg.match = match
         msg.idle_timeout = duration[0]
         msg.hard_timeout = duration[1]
-        msg.priority = 50
+        msg.priority = 100
         self.connection.send(msg)
 
     # function that allows adding firewall rules into the firewall table
